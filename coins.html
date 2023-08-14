@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="about.html">Crypto Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="coins.html">Coins</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="live_reports.html">Live Reports</a>
+                </li>
+            </ul>
+            <!-- Selected coins in the navbar -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <span class="nav-link">
+                        Selected Coins: <span id="selected-coins-counter">0</span>/5
+                        <!-- Button to open the modal -->
+                        <button type="button" class="btn btn-primary ml-2" id="view-selected-coins-btn">+</button>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <section id="coins">
+            <h2>Available Coins</h2>
+            <div class="input-group mb-3">
+                <input type="text" id="search-input" class="form-control" placeholder="Search coin by symbol">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="search-button">Search</button>
+                </div>
+            </div>
+
+            <div class="row" id="coin-cards">
+                <!-- Coin cards will be dynamically populated here -->
+            </div>
+
+            <!-- Change this coin button moved to the navbar -->
+            <button class="btn btn-primary mt-3" id="change-coin-btn" style="display: none;">Change This Coin</button>
+        </section>
+    </main>
+</body>
+</html>
